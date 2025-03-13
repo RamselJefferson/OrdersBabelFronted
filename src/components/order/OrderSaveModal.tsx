@@ -108,7 +108,7 @@ function OrderSaveModal({ onClose, open, mode, orderId }: Props) {
       value={
         mode === "update" && orderState?.orderDate
           ? orderState.orderDate.toISOString().split("T")[0]
-          : new Date().toISOString().split("T")[0]
+          : orderState.orderDate
       }
       onChange={handleChange}
       InputLabelProps={{ shrink: true }}
